@@ -4,4 +4,4 @@ lexer:
 
 .PHONY: clean
 clean:
-	rm lexer
+	rm -f lexer
