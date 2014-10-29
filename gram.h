@@ -1,0 +1,15 @@
+#define SEMIC                            1
+#define IDENTIFIER                       2
+#define EQ                               3
+#define VECADD                           4
+#define SCMULT                           5
+#define SUB                              6
+#define LPAREN                           7
+#define RPAREN                           8
+#define LBRACKET                         9
+#define RBRACKET                        10
+#define COMMA                           11
+#define ADD                             12
+#define MULT                            13
+#define DIV                             14
+#define NUMBER                          15
