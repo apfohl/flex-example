@@ -29,6 +29,24 @@
 
 int main(int argc, char **argv)
 {
+  const char token[][11] = {
+    "",
+    "SEMIC",
+    "IDENTIFIER",
+    "EQ",
+    "VECADD",
+    "SCMULT",
+    "SUB",
+    "LPAREN",
+    "RPAREN",
+    "LBRACKET",
+    "RBRACKET",
+    "COMMA",
+    "ADD",
+    "MULT",
+    "DIV",
+    "NUMBER"
+  };
   const char *input = "a = 5;\nb = 87.5;\nc = (a * b) |* [1, 2, 3, 4];";
 
   yyscan_t scanner;
@@ -37,7 +55,7 @@ int main(int argc, char **argv)
 
   int lex_code = yylex(scanner);
   while(lex_code > 0) {
-    printf("%s\n", yyget_text(scanner));
+    printf("%s\t%s\n", yyget_text(scanner), token[lex_code]);
     lex_code = yylex(scanner);
   }
 
